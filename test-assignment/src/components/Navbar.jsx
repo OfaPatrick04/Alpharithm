@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -9,7 +8,6 @@ const Navbar = () => {
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
-    // Slide-in animation for the mobile menu
     const slideVariants = {
         hidden: { x: "-100%", opacity: 0 },
         visible: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } },
@@ -18,7 +16,6 @@ const Navbar = () => {
 
     return (
         <nav className="flex items-center justify-between px-[70px] pt-[40px] bg-transparent sticky top-[-100px] z-50 w-full">
-            {/* Logo */}
             <img src={logo} alt="logo" />
 
             {/* Desktop Navigation */}
@@ -36,7 +33,6 @@ const Navbar = () => {
                 ))}
             </div>
 
-            {/* Buttons (Desktop) */}
             <div className="hidden lg:flex space-x-[12px]">
                 <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -59,7 +55,7 @@ const Navbar = () => {
                 {isOpen ? "" : <HiMenu size={32} color="white" />}
             </button>
 
-            {/* Mobile Navigation - Slide from Left */}
+            {/* Mobile Navigation */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div

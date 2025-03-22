@@ -1,17 +1,14 @@
-// ModelsSection.jsx
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 
-// Import Images
 import marketImage from "../assets/Frame 1984078106.png";
 import financeImage from "../assets/Frame 1984078106 (1).png";
 import analyticsImage from "../assets/Frame 1984078106 (2).png";
 import contentImage from "../assets/Frame 1984078106 (3).png";
 import customerImage from "../assets/Frame 1984078106 (4).png";
 
-// Feature Data
 const features = [
   {
     id: "market",
@@ -54,7 +51,6 @@ const features = [
   },
 ];
 
-// Create Ghost Cards (for seamless preview)
 const ghostFeatures = [
   features[features.length - 1],
   ...features,
@@ -101,7 +97,6 @@ const ModelsSection = () => {
 
   return (
     <div className="bg-white text-gray-900 flex flex-col items-center pb-20 px-7">
-      {/* Header */}
       <div className="text-[#22263F] py-16 text-center px-6 sm:px-12 lg:px-0 w-full max-w-[860px]">
         <h2 className="text-[clamp(32px,5vw,50px)] font-semibold leading-tight tracking-[-0.02em] px-12">
           AI Models tailored for your business needs
@@ -129,7 +124,6 @@ const ModelsSection = () => {
         ))}
       </div>
 
-      {/* Carousel Section */}
       <div
         className="relative w-full overflow-x-hidden mt-12 pt-10"
         ref={emblaRef}
@@ -144,7 +138,6 @@ const ModelsSection = () => {
                 }`}
             >
               <div className="flex flex-col md:flex-row items-center justify-between bg-[#F6FAF3] rounded-lg p-6 sm:p-8">
-                {/* Text Section */}
                 <div className="flex flex-col w-full md:w-1/2 mb-6 md:mb-0">
                   <h2 className="text-lg sm:text-xl font-semibold mb-2 text-[#828282]">
                     {feature.title}
@@ -160,7 +153,6 @@ const ModelsSection = () => {
                   </motion.button>
                 </div>
 
-                {/* Image Section */}
                 <div className="w-full md:w-1/2 flex justify-center">
                   <img
                     src={feature.image}

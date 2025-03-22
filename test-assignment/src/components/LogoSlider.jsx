@@ -16,12 +16,10 @@ const partners = [
 const LogoSlider = () => {
   return (
     <div className="bg-white py-6 space-y-8 overflow-hidden">
-      {/* Title */}
       <p className="text-center text-[16px] text-[#667085] font-medium font-jakarta">
         Join 4,000+ companies already growing
       </p>
 
-      {/* Infinite Scroll Animation */}
       <div className="relative w-full overflow-hidden">
         <motion.div
           className="flex space-x-12"
@@ -33,7 +31,6 @@ const LogoSlider = () => {
             ease: "linear",
           }}
         >
-          {/* Duplicate the logos for smooth loop */}
           {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
             <div key={index} className="flex items-center space-x-2 min-w-[150px]">
               <img
