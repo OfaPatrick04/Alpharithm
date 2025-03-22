@@ -26,7 +26,7 @@ const Hero = () => {
         </motion.button>
       </div>
 
-      <div className="absolute w-[600px] h-[600px] sm:w-[750px] sm:h-[750px] md:w-[963px] md:h-[963px] bg-[#0037FF] blur-[280px] sm:blur-[400px] md:blur-[585.2px] rounded-full top-[80%] translate-y-[10%]"></div>
+      <div className="absolute w-[600px] h-[600px] sm:w-[750px] sm:h-[750px] md:w-[963px] md:h-[963px] bg-[#0037FF] blur-[280px] sm:blur-[400px] md:blur-[585.2px] rounded-full top-[80%] translate-y-[-20%]"></div>
     </div>
   );
 };
